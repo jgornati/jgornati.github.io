@@ -3,6 +3,6 @@
 :hp-tags: Welcome
 
 Me llamo Joel Gornati soy de Rosario, Argentina y esta es mi primerva vez escribiendo en un blog. En el voy a compartir mis experiencias en electronica, programacion y alguna otra cosa mas. +
-Soy Tecnico en Electronica, estudiante de Ingenieria Electrica, aficionado a la programacion y amante de la informatica	.
+Soy Tecnico en Electronica, estudiante de Ingenieria Electrica, aficionado a la programacion y amante de los gadgets.
 
 Con el correr de los días ire posteando algunos tutoriales que tengo casi listos, para devolverle algunos favores 
