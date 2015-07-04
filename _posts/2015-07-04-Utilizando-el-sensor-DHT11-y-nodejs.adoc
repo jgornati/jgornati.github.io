@@ -1,0 +1,31 @@
+= Utilizando el sensor DHT11 y node.js
+
+:hp-tags: node.js express mongoDB MQTT mosca.js socket.io DHT11
+
+
+**Introducción**
+
+En este tutorial que voy a compartir mostraré como utilizar el popular sensor de humedad y temperatura DHT11 conectado a un arduino WiDo de DFRobot (copia de un arduino Leonardo con WiFi y slot para memoria SD). El cual enviará mediante protocolo MQTT (broker mosca.js) los datos hacia un servidor montado en express con una base dato no relacional mongoDB que se encargara de guardar los datos, a su vez, se abrirá un websocket (socket.io) quien empujará el dato en tiempo real desde el lado del servidor al cliente sin que este ultimo lo requiera cada sierto tiempo. 
+
+
+
+**Definiciones**
+
++ MQTT (Message Queue Telemetry Transport) http://mqtt.org/ -> Es un protocolo utilizado para la comunicacion M2M (Machine-To-Machine) el cual se está imponiendo en el IoT (Internet of Things), debido a que consume muy pocos recursos (CPU, RAM, Ancho de banda, etc). Se utiliza especialmente para la comunicacion de sensores.
+
+El funcionamiento es simple, hay un broker (servidor) a la que se conectan los clientes.
+La comunicación se basa en “topics” (temas), el cliente que desea transmitir mensajes crea un tema y los nodos que deseen recibirlo deben subscribirse a él. La comunicación puede ser de uno a uno, o de uno a muchos.
+
+image::topologia.png[]
+imagen de https://geekytheory.com/que-es-mqtt/ (aca pueden encontrar la explicacion mas completa)
+
+
++ mosca.js https://github.com/mcollina/mosca -> Es un broker MQTT en node.js
+
++ express http://expressjs.com/es/ -> Framework web (marco de trabajo) para node.js
+
++ MongoDB https://www.mongodb.org/ -> Base de dato NoSQL que se lleva bien con node.js
+
++ Socket.io http://socket.io/ -> Libreria que permite una comunicacion bidireccional entre el cliente y servidor en tiempo real basada en eventos.
+
+**
